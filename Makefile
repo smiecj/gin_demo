@@ -1,4 +1,7 @@
-build:
+swagger:
+	swag init
+
+build: swagger
 	go build -o main_gin main.go
 
 stop:

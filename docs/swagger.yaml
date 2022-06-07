@@ -1,0 +1,29 @@
+definitions:
+  controller.Job:
+    properties:
+      name:
+        type: string
+      need:
+        type: integer
+    type: object
+info:
+  contact: {}
+paths:
+  /job/list:
+    get:
+      consumes:
+      - application/json
+      description: get jobs
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/controller.Job'
+            type: array
+      summary: Get jobs
+      tags:
+      - job
+swagger: "2.0"
